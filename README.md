@@ -7,17 +7,17 @@
 ![License](https://img.shields.io/badge/license-Unlicense-blue)
 ![Tech](https://img.shields.io/badge/made%20with-Python%20%7C%20HTML%20%7C%20CSS-orange)
 
-**🔗 [DEMO](https://passwordlelo.netlify.app)**
+** [DEMO](https://passwordlelo.netlify.app)**
 
 ---
 
-## 🧩 Introduction
+##  Introduction
 
 A sleek and secure password generator built with Python and web technologies. This tool helps users create strong, customizable passwords instantly. Designed with simplicity and usability in mind, it’s perfect for personal use or integration into larger systems.
 
 ---
 
-## 📌 Summary
+##  Summary
 
 This project showcases how Python can power a lightweight yet effective password generation tool with a clean web interface. It allows users to:
 
@@ -28,7 +28,7 @@ This project showcases how Python can power a lightweight yet effective password
 
 ---
 
-## 🛠️ Project Overview
+##  Project Overview
 
 The password generator is structured to highlight:
 
@@ -39,17 +39,17 @@ The password generator is structured to highlight:
 
 ---
 
-## 📂 Features
+##  Features
 
-- ✅ Customizable password length
-- ✅ Toggle character types (A-Z, a-z, 0-9, symbols)
-- ✅ Copy-to-clipboard functionality
-- ✅ Responsive design for all devices
-- ✅ Fast online access via Netlify
+-  Customizable password length
+-  Toggle character types (A-Z, a-z, 0-9, symbols)
+-  Copy-to-clipboard functionality
+-  Responsive design for all devices
+-  Fast online access via Netlify
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Clone the Repository
 
@@ -68,16 +68,16 @@ Then open `http://localhost:5000` in your browser.
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 Visit the live version here:  
-🔗 **[passwordlelo.netlify.app](https://passwordlelo.netlify.app)**
+ **[passwordlelo.netlify.app](https://passwordlelo.netlify.app)**
  Screenshot
  <img width="1003" height="918" alt="{0518005A-02FD-4D31-9FAF-E7C55395049B}" src="https://github.com/user-attachments/assets/b9c556ce-8908-4914-9b42-d88888344685" />
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [Unlicense](https://unlicense.org/), meaning it’s free to use, modify, and distribute.
 
