@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-Unlicense-blue)
 ![Tech](https://img.shields.io/badge/made%20with-Python%20%7C%20HTML%20%7C%20CSS-orange)
 
-** [DEMO](https://passwordlelo.netlify.app)**
+ [Website link](https://passwordlelo.netlify.app)
 
 ---
 
