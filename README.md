@@ -72,6 +72,8 @@ Then open `http://localhost:5000` in your browser.
 
 Visit the live version here:  
 🔗 **[passwordlelo.netlify.app](https://passwordlelo.netlify.app)**
+ Screenshot
+ <img width="1003" height="918" alt="{0518005A-02FD-4D31-9FAF-E7C55395049B}" src="https://github.com/user-attachments/assets/b9c556ce-8908-4914-9b42-d88888344685" />
 
 ---
 
