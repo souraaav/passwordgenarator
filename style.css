@@ -23,6 +23,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* prevent horizontal overflow while keeping vertical scroll */
+    /* safe area for phones with notches / dynamic toolbars */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* body: remove the hard overflow:hidden so content can respond to dynamic viewport */
 body {
     font-family: var(--font-main);
     background: var(--bg-color);
@@ -32,51 +44,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     position: relative;
+    /* allow vertical scroll on very small screens instead of clipping */
 }
 
-/* Background Shapes */
+/* Background Shapes: scale with viewport and keep them from forcing horizontal scroll */
 .background-shapes .shape {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
     z-index: -1;
     animation: float 10s infinite ease-in-out alternate;
+    /* make shapes responsive so they don't create extra width on small screens */
+    max-width: 50vw;
+    max-height: 50vw;
 }
 
 .shape-1 {
-    width: 300px;
-    height: 300px;
+    width: clamp(180px, 28vw, 300px);
+    height: clamp(180px, 28vw, 300px);
     background: #764ba2;
-    top: -50px;
-    left: -50px;
+    top: -8vw;
+    left: -6vw;
 }
 
 .shape-2 {
-    width: 400px;
-    height: 400px;
+    width: clamp(220px, 36vw, 400px);
+    height: clamp(220px, 36vw, 400px);
     background: #667eea;
-    bottom: -100px;
-    right: -100px;
+    bottom: -10vw;
+    right: -8vw;
     animation-delay: -2s;
 }
 
 .shape-3 {
-    width: 200px;
-    height: 200px;
+    width: clamp(140px, 20vw, 200px);
+    height: clamp(140px, 20vw, 200px);
     background: #f68084;
     top: 40%;
-    left: 20%;
+    left: 18%;
     animation-delay: -5s;
 }
 
-@keyframes float {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(30px, 50px) rotate(10deg); }
-}
-
-/* Container */
+/* Container: prevent fixed pixel overflow and add small horizontal margin */
 .container {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
@@ -85,8 +95,9 @@ body {
     box-shadow: var(--glass-shadow);
     border-radius: 24px;
     padding: 2rem;
-    width: 90%;
+    width: calc(100% - 32px); /* leave a little breathing room on small screens */
     max-width: 450px;
+    margin-inline: auto;
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -139,7 +150,8 @@ header p {
     letter-spacing: 1px;
     word-break: break-all;
     color: var(--text-color);
-    max-width: 320px;
+    max-width: calc(100% - 56px); /* leave space for the copy button */
+    overflow-wrap: anywhere;
 }
 
 .password-display.placeholder {
@@ -321,4 +333,14 @@ input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 420px) {
     .bar { width: 28px; }
     .password-display { font-size: 1.1rem; }
+    .container {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+    .settings-grid {
+        gap: 0.5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .label-row { gap: 8px; }
+    .generate-btn { width: 100%; }
 }
